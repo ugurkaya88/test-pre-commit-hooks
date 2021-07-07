@@ -1,11 +1,10 @@
-- id: maven-spotless-check
-  name: maven spotless check
-  description: Runs spotless:check goal
-  entry: maven-spotless-check
-  language: python
-  pass_filenames: false
-
 - id: maven-spotless-apply
+  name: Maven spotless:apply
+  description: Executes 'mvn spotless:apply'
+  entry: hooks/mvn.spotless.apply.sh
+  language: script
+
+- id: maven-spotless-apply-x
   name: maven spotless apply
   description: Runs spotless:apply goal
   entry: maven-spotless-apply
