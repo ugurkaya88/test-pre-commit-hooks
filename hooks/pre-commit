@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+# Store which files are to be committed
+filesToCommit="$(git diff-index --cached --name-only --diff-filter=d HEAD | xargs)"
+
+mvn spotless:apply
+
+# Add only the files in the commit, exclude the ones haven't been in the commit.
+git add ${filesToCommit}
+
+echo "git-hooks original"
+
+exit 0
