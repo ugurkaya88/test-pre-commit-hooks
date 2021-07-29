@@ -8,7 +8,3 @@ mvn spotless:apply --quiet
 
 # Add only the files in the commit, exclude the ones haven't been in the commit.
 git add ${filesToCommit}
-
-echo "git-hooks original"
-
-exit 0
